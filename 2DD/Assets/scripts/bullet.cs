@@ -20,16 +20,22 @@ public class bullet : MonoBehaviour
         rb2d.MovePosition(transform.position + transform.up * bulletspeed * Time.deltaTime);  
     }
 
-    void OnTriggerEnter (Collider other)
+    void OnTriggerEnter2D (Collider2D other)
     {
+
         string tag = other.gameObject.tag;
 
-        Debug.Log("hsd");
+        if (tag == "Enemy")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
 
         if (tag == "Border")
         {
             Destroy(gameObject);
-            Debug.Log("hsduhdus");
+
         }
+
     }
 }
