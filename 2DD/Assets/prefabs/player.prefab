@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3048969074514617648}
   - component: {fileID: 3048969074514617647}
+  - component: {fileID: 848530013141236465}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -80,6 +81,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &848530013141236465
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048969074514617649}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.15999998, y: 0.16000001}
+  m_Direction: 0
 --- !u!1 &3048969074966744272
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +109,7 @@ GameObject:
   - component: {fileID: 3048969074966744270}
   - component: {fileID: 3048969074966744271}
   - component: {fileID: 3048969074966744268}
+  - component: {fileID: 1413702562352061624}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -177,6 +195,7 @@ MonoBehaviour:
   speed: 10
   bullet: {fileID: 1736747184874769274, guid: 1c9522541e8f9a44fa82e40da48d543e, type: 3}
   FirePoint: {fileID: 4762548161389886757}
+  fireRate: 0.3
 --- !u!50 &3048969074966744268
 Rigidbody2D:
   serializedVersion: 4
@@ -198,6 +217,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1413702562352061624
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048969074966744272}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
 --- !u!1 &7319993969691755681
 GameObject:
   m_ObjectHideFlags: 0
