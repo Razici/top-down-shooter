@@ -34,7 +34,7 @@ public class MeleeEnemy : MonoBehaviour
             transform.up = lookPosition;
             if (distance <= 1.7f)
             {
-                if (attackWait <= 1.1f)
+                if (attackWait <= attackWaitTime)
                 {
                     attackWait += Time.deltaTime;
                 }
@@ -53,7 +53,8 @@ public class MeleeEnemy : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Debug.Log("no player");
+            rb2d.bodyType = RigidbodyType2D.Static; 
         }
 
     }
